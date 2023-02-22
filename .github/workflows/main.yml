@@ -20,7 +20,6 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Composer & NPM Dependencies
         run: |
-          composer update
           composer dump-autoload
       - name: Generate Laravel Application Key
         run: php artisan key:generate
